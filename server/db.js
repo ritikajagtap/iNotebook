@@ -4,7 +4,7 @@ const path = require('path')
 env.config({ path: './.env' });
 
 const mongoURI = `mongodb+srv://ritikajagtap:${process.env.MONGO_PASSWORD}@ritikanotes.gqclj6w.mongodb.net/?retryWrites=true&w=majority`;
-
+console.log(process.env.MONGO_PASSWORD);
 const connectToMongo = ()=> {
     mongoose.connect(mongoURI, { useNewUrlParser: true,useUnifiedTopology: true },(error)=> {
         if (error) {

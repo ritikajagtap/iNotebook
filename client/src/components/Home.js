@@ -1,8 +1,9 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-
+import Notes from './Notes';
 function Home() {
+    
     return (
     <div>
         <div className='container'>
@@ -27,7 +28,8 @@ function Home() {
                 Submit
             </Button>
             </Form>
-            <h1>Your Notes!</h1>
+
+            <Notes></Notes>
         </div >
         </div>
   )

@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card';
 const NoteItem = (props) => {
     const context = useContext(noteContext);
     const {delNote} = context
-    const { note } = props;
+    const { note, updateNote } = props;
     return (
         <div className='col md-3'>
             <Card style={{ width: '18rem' }} className="my-3">
@@ -14,7 +14,7 @@ const NoteItem = (props) => {
                         <Card.Title>
                             {note.title}
                         </Card.Title>
-                        <i className="fa-solid fa-pencil mx-2" ></i>
+                        <i className="fa-solid fa-pencil mx-2" onClick={()=>{updateNote(note)}}></i>
                         <i className="fa-solid fa-trash mx-2" onClick={()=>{delNote(note._id)}}></i>
                     </div>
 
